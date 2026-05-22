@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Corey Won · Bridging the Gap Between Profit and Planet</title>
+<meta name="description" content="Corey Won. Sustainability professional bridging the gap between profit and planet. Lyka Pet Food alumnus, GRI certified, Oxford-trained." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --ink: #11150f;
+    --ink-soft: #4a4f47;
+    --ink-mute: #8a8f86;
+    --line: #e6e6df;
+    --accent: #2f6b4f;
+    --accent-soft: #ecf4ee;
+    --max-w: 1100px;
+    --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
+
+  /* Header */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250,250,247,0.88);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.site .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+  }
+  .brand span { color: var(--accent); }
+  nav.primary a {
+    margin-left: 22px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    transition: color 0.2s ease;
+  }
+  nav.primary a:hover { color: var(--ink); }
+  @media (max-width: 760px) {
+    nav.primary a { margin-left: 12px; font-size: 12px; }
+    nav.primary a:nth-child(-n+2) { display: none; }
+  }
+
+  /* Hero */
+  .hero { padding: 80px 0 64px; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 720px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #d8e6dc 0%, #b5cdbe 100%);
+    border: 4px solid var(--surface);
+    box-shadow: 0 8px 30px rgba(17,21,15,0.08);
+    flex-shrink: 0;
+  }
+  .profile-photo img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .profile-photo .ph-fallback {
+    position: absolute; inset: 0;
+    display: none;
+    align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 64px; color: var(--accent); font-weight: 700;
+    opacity: 0.4;
+  }
+  /* Show fallback only when image is hidden (failed to load) */
+  .profile-photo img[style*="display: none"] + .ph-fallback,
+  .profile-photo:not(:has(img)) .ph-fallback { display: flex; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 18px; font-weight: 600;
+  }
+  .eyebrow::before {
+    content: ''; width: 24px; height: 1px; background: var(--accent);
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(34px, 5.2vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 20px;
+  }
+  h1 em { font-style: italic; color: var(--accent); font-weight: 700; }
+  .lede {
+    max-width: 620px;
+    font-size: 16.5px;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 20px;
+    font-size: 13px; color: var(--ink-mute);
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .meta a:hover { color: var(--accent); }
+  .meta strong { color: var(--ink); font-weight: 500; }
+
+  /* Generic sections */
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 36px;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+  .section-head .label {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 600;
+  }
+  .intro {
+    color: var(--ink-soft); font-size: 15.5px;
+    max-width: 740px; margin-bottom: 28px;
+  }
+
+  /* Philosophy */
+  .framings { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+  .framing {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 22px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .framing:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .framing .num {
+    font-family: var(--font-display);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .framing h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .framing p { color: var(--ink-soft); font-size: 13.5px; }
+
+  /* Three principles */
+  .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 820px) { .principles { grid-template-columns: 1fr; } }
+  .principle {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 30px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .principle:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .principle .icon {
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--accent-soft);
+    border-radius: 12px;
+    margin-bottom: 18px;
+    color: var(--accent);
+  }
+  .principle .icon svg { width: 24px; height: 24px; }
+  .principle h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .principle p { color: var(--ink-soft); font-size: 14px; margin-bottom: 10px; }
+  .principle p:last-child { margin-bottom: 0; }
+
+  /* Achievements */
+  .achievements { display: grid; gap: 14px; }
+  .ach {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .ach:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .ach h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .ach p { color: var(--ink-soft); font-size: 14.5px; }
+  .ach .org {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-bottom: 8px;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .ach .stat {
+    text-align: right;
+    font-family: var(--font-display);
+    color: var(--accent);
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    align-self: center;
+    white-space: nowrap;
+  }
+  .ach .stat small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 6px;
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .ach { grid-template-columns: 1fr; padding: 22px; }
+    .ach .stat { text-align: left; font-size: 30px; }
+  }
+
+  /* Experience */
+  .exp { display: grid; gap: 0; }
+  .exp-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 32px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-meta { color: var(--ink-mute); font-size: 12.5px; font-weight: 500; }
+  .exp-headline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    margin: 0 0 8px;
+    line-height: 1.35;
+  }
+  .exp-summary {
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    margin: 0 0 4px;
+  }
+  .exp-role {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .exp-org { color: var(--ink-soft); font-size: 13.5px; margin-bottom: 12px; font-weight: 500; }
+  .exp-body { color: var(--ink-soft); font-size: 14.5px; }
+  .exp-body ul { list-style: none; padding: 0; margin-top: 8px; }
+  .exp-body li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  .exp-body li::before {
+    content: ''; position: absolute; left: 0; top: 11px;
+    width: 6px; height: 1px; background: var(--accent);
+  }
+  @media (max-width: 640px) {
+    .exp-item { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* Embeds */
+  .embeds {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 980px) { .embeds { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; } }
+  .embed-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px;
+    overflow: hidden;
+  }
+  .embed-card .embed-header {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .embed-card iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    display: block;
+  }
+  .embed-li iframe { height: 540px; }
+  .embed-ig iframe { height: 720px; }
+
+  /* Modern Slavery register card */
+  .register-card {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    padding: 22px 26px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .register-card:hover { background: #dfeee4; transform: translateY(-2px); }
+  .register-card .register-source {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .register-card .register-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .register-card .register-desc {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    max-width: 640px;
+  }
+  .register-card .register-cta {
+    flex-shrink: 0;
+    font-size: 13.5px;
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  @media (max-width: 720px) {
+    .register-card { flex-direction: column; align-items: flex-start; }
+    .register-card .register-cta { margin-top: 4px; }
+  }
+
+  /* Credentials */
+  .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .cred {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 22px;
+  }
+  .cred h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+  .cred p { font-size: 13px; color: var(--ink-soft); }
+  .cred .year { font-size: 11.5px; color: var(--ink-mute); margin-top: 8px; font-weight: 500; }
+  @media (max-width: 640px) { .creds { grid-template-columns: 1fr; } }
+
+  /* Hobbies */
+  .hobby-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+  @media (max-width: 720px) { .hobby-row { grid-template-columns: repeat(2, 1fr); } }
+  .hobby {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+  }
+  .hobby .icon {
+    font-size: 26px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .hobby h4 {
+    font-family: var(--font-display); font-weight: 700; font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .hobby p { font-size: 12px; color: var(--ink-soft); }
+
+  /* Horizontal travel carousel */
+  .carousel-wrap { position: relative; }
+  .carousel {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 4px 0 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .carousel::-webkit-scrollbar { height: 6px; }
+  .carousel::-webkit-scrollbar-track { background: var(--line); border-radius: 3px; }
+  .carousel::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+  .photo {
+    flex: 0 0 240px;
+    aspect-ratio: 4/5;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #d8e6dc 0%, #c0d6c8 100%);
+    scroll-snap-align: start;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo .cap {
+    position: absolute;
+    inset: auto 0 0 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(17,21,15,0.78) 100%);
+    color: #fff;
+    padding: 14px 12px 10px;
+    font-size: 11.5px;
+    letter-spacing: 0.02em;
+  }
+  .photo .cap strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 13.5px; margin-bottom: 2px; }
+  .photo .placeholder { display: none; }
+  .carousel-nav {
+    display: flex; gap: 8px; justify-content: flex-end; margin-top: 4px;
+  }
+  .carousel-nav button {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--ink);
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .carousel-nav button:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  /* Footer */
+  footer.site {
+    padding: 48px 0 56px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-mute);
+    font-size: 12.5px;
+  }
+  footer.site .wrap {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 14px;
+  }
+  .cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--ink); color: var(--bg);
+    padding: 12px 22px; border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+    transition: background 0.2s ease;
+  }
+  .cta:hover { background: var(--accent); }
+  .cta::after { content: '→'; transition: transform 0.2s ease; }
+  .cta:hover::after { transform: translateX(3px); }
+
+  /* Experience sub-group labels */
+  .exp-group-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 8px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  .exp-group-label:not(:first-of-type) { margin-top: 32px; }
+
+  /* Bubbles (click-to-expand cards for achievements + experience) */
+  .lens-block { margin-bottom: 36px; }
+  .lens-block:last-child { margin-bottom: 0; }
+  .lens-head {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 14px;
+  }
+  .lens-head .lens-icon {
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--accent-soft); color: var(--accent);
+    border-radius: 8px; flex-shrink: 0;
+  }
+  .lens-head .lens-icon svg { width: 18px; height: 18px; }
+  .lens-head h3 {
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 18px;
+    color: var(--ink); letter-spacing: -0.005em;
+  }
+  .bubbles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  details.bubble {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+  }
+  details.bubble:hover { border-color: var(--accent); }
+  details.bubble[open] {
+    border-color: var(--accent);
+    box-shadow: 0 6px 24px rgba(47,107,79,0.08);
+    grid-column: 1 / -1;
+  }
+  details.bubble summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 20px;
+    display: flex; align-items: flex-start; gap: 12px;
+    user-select: none;
+  }
+  details.bubble summary::-webkit-details-marker { display: none; }
+  details.bubble summary::marker { display: none; }
+  .bubble-main { flex: 1; min-width: 0; }
+  .bubble-tag {
+    display: block;
+    font-size: 10.5px; letter-spacing: 0.11em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .bubble-headline {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 16px;
+    color: var(--ink);
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    margin-bottom: 6px;
+  }
+  .bubble-meta {
+    display: block;
+    font-size: 12.5px; color: var(--accent);
+    font-weight: 600;
+  }
+  .bubble-chev {
+    flex-shrink: 0;
+    width: 26px; height: 26px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink-mute);
+    transition: transform 0.2s ease, color 0.2s ease;
+    font-family: var(--font-body);
+    font-size: 20px; line-height: 1; font-weight: 300;
+  }
+  details.bubble[open] .bubble-chev { transform: rotate(45deg); color: var(--accent); }
+  .bubble-body {
+    padding: 0 20px 20px;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    margin-top: 2px;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .bubble-body ul { list-style: none; padding: 0; margin-top: 8px; }
+  .bubble-body li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  .bubble-body li::before {
+    content: ''; position: absolute; left: 0; top: 11px;
+    width: 6px; height: 1px; background: var(--accent);
+  }
+
+  /* Press / social link cards (replacing iframes) */
+  .press-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 820px) { .press-cards { grid-template-columns: 1fr; } }
+  .press-link {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px;
+    display: flex; flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    color: var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .press-link::before {
+    content: '';
+    position: absolute; inset: 0 0 auto 0;
+    height: 4px; background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  .press-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(47,107,79,0.08); }
+  .press-link:hover::before { transform: scaleX(1); }
+  .press-platform {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700;
+  }
+  .press-platform svg { width: 14px; height: 14px; }
+  .press-author { font-size: 13px; color: var(--ink-soft); font-weight: 500; }
+  .press-title {
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 17px;
+    line-height: 1.3; letter-spacing: -0.005em;
+    margin-top: 2px;
+  }
+  .press-desc { font-size: 13.5px; color: var(--ink-soft); flex: 1; }
+  .press-cta {
+    margin-top: auto;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .press-cta::after { content: ' →'; transition: transform 0.2s ease; display: inline-block; }
+  .press-link:hover .press-cta::after { transform: translateX(3px); }
+
+
+  /* Value-add graphic section */
+  .value-graphic {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 28px;
+    text-align: center;
+  }
+  .value-graphic svg { width: 100%; height: auto; max-width: 820px; display: block; margin: 0 auto; }
+  .value-caption {
+    text-align: center;
+    margin-top: 18px;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Journey section */
+  .journey-wrap {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 40px;
+    max-width: 820px;
+  }
+  .journey-wrap p {
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+  .journey-wrap p:last-child { margin-bottom: 0; }
+  .journey-wrap p strong { color: var(--ink); font-weight: 600; }
+  @media (max-width: 720px) {
+    .journey-wrap { padding: 28px 24px; }
+    .journey-wrap p { font-size: 15px; }
+  }
+
+
+
+  /* Subtle reveal */
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* QA: prevent horizontal scrolling + zoom hiccups */
+  html, body { overflow-x: hidden; max-width: 100%; }
+  img, iframe, video { max-width: 100%; height: auto; }
+  .embeds iframe { max-width: 100%; }
+  @media (max-width: 720px) {
+    .profile-photo { width: 160px; height: 160px; margin: 0 auto; }
+    .hero { padding: 64px 0 48px; }
+    .wrap { padding: 0 22px; }
+    section { padding: 48px 0; }
+    .ach { padding: 22px; }
+    .principle { padding: 24px; }
+    .embed-li iframe { height: 460px; }
+    .embed-ig iframe { height: 560px; }
+    nav.primary { display: none; }
+    header.site .wrap { justify-content: center; }
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 18px; }
+    .meta { gap: 12px; font-size: 12.5px; }
+    .photo { flex: 0 0 200px; }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#top" class="brand">Corey <span>Won</span></a>
+    <nav class="primary">
+      <a href="#philosophy">Approach</a>
+      <a href="#principles">Principles</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#experience">Experience</a>
+      <a href="#press">In the field</a>
+      <a href="#journey">Journey</a>
+      <a href="#hobbies">Off the clock</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero" style="border-top: none;">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="profile-photo reveal">
+          <img src="images/profile.jpg" alt="Corey Won" onerror="this.style.display='none'" loading="eager" fetchpriority="high">
+          <div class="ph-fallback">CW</div>
+        </div>
+        <div>
+          <div class="eyebrow reveal">Sustainability · Building ESG Function</div>
+          <h1 class="reveal">Bridging the gap between <em>profit and planet</em>.</h1>
+          <p class="lede reveal">
+            Sustainability professional who turns climate ambition into commercial outcomes. I build the systems,
+            governance, and data infrastructure that make ESG performance auditable, defensible, and a source of value.
+            Most recently at Lyka Pet Food through a 20x revenue scale-up (from $10M to $200M ARR) and 30 to 400+ headcount growth.
+          </p>
+          <div class="meta reveal">
+            <div><strong>Sydney, Australia</strong></div>
+            <div><a href="mailto:coreywon99@gmail.com">coreywon99@gmail.com</a></div>
+            <div><a href="https://www.linkedin.com/in/coreywon" target="_blank" rel="noopener">linkedin.com/in/coreywon</a></div>
+            <div>+61 487 355 077</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section id="philosophy">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>How I frame sustainability</h2>
+        <div class="label">00 · Approach</div>
+      </div>
+      <p class="intro reveal">
+        Five lenses I bring to every sustainability problem. Technical skills alone do not get a strategy funded, embedded, or scaled.
+      </p>
+
+      <div class="framings">
+        <div class="framing reveal">
+          <div class="num">01</div>
+          <h3>Market-oriented</h3>
+          <p>Technical rigour plus commercial systems thinking. Sustainability lives where science, engineering, finance, and operations meet.</p>
+        </div>
+        <div class="framing reveal">
+          <div class="num">02</div>
+          <h3>Linking initiative to value</h3>
+          <p>Connect every initiative to a financial outcome: cost-out, revenue-in, risk mitigated, or brand strengthened.</p>
+        </div>
+        <div class="framing reveal">
+          <div class="num">03</div>
+          <h3>Process &amp; adaptability</h3>
+          <p>Sustainability is an emerging discipline. I navigate ambiguity, iterate quickly, and stay resilient through change.</p>
+        </div>
+        <div class="framing reveal">
+          <div class="num">04</div>
+          <h3>Data-driven</h3>
+          <p>Data integrity, AI fluency, and platform expertise are non-negotiable. The most actionable insights live in clean data.</p>
+        </div>
+        <div class="framing reveal">
+          <div class="num">05</div>
+          <h3>Change management</h3>
+          <p>Understanding motivations unlocks joint-benefit outcomes. Culture shift is how sustainability sticks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three principles -->
+  <section id="principles">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Three ways I embed sustainability into a business</h2>
+        <div class="label">01 · Operating model</div>
+      </div>
+      <p class="intro reveal">
+        Sustainability is not a side-of-desk function. Done right, it operates as a risk lens, a growth lens, and a brand lens
+        concurrently inside the business.
+      </p>
+
+      <div class="principles">
+        <div class="principle reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Risk reduction vehicle</h3>
+          <p>Stay ahead of regulatory change, avoid fines and disclosure failures, and hedge against material-price shocks driven by climate, energy, and resource scarcity.</p>
+          <p>Compliance is a floor, not a ceiling. The goal is to convert regulatory pressure into operational discipline before it converts into cost.</p>
+        </div>
+
+        <div class="principle reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/>
+            </svg>
+          </div>
+          <h3>Innovation opportunity creator</h3>
+          <p>Reframe constraints into commercial opportunity. Sustainability pressure can unlock new revenue streams, lower input costs, surface adjacent markets, and sharpen product differentiation.</p>
+          <p>For example, in food manufacturing, value recovery from waste streams (circular economy), packaging redesign, and lower-impact ingredient sourcing become commercial moats rather than cost lines.</p>
+        </div>
+
+        <div class="principle reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+            </svg>
+          </div>
+          <h3>Branding benefit</h3>
+          <p>Build a credible <em>social licence to operate</em>, the unwritten permission from customers, regulators, communities, and capital markets that lets a business grow.</p>
+          <p>Done well, it opens green-bond and impact-fund capital, lifts customer lifetime value, and gives talent a reason to stay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="value">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>How sustainability adds value to the business</h2>
+        <div class="label">01a · The frame</div>
+      </div>
+      <p class="intro reveal">
+        Every business operates inside a constantly changing environment. Sustainability is about positioning the business to capture value from that change rather than be eroded by it. The work sits in the zone between the business and the world it depends on.
+      </p>
+      <div class="value-graphic reveal">
+        <svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="vt vdesc">
+          <title id="vt">How sustainability adds value</title>
+          <desc id="vdesc">A business sphere of influence sits inside the changing environment. Capturing opportunities expands the sphere outward, while addressing risks early shields and strengthens it.</desc>
+          <defs>
+            <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,1 L9,5 L0,9 L2.5,5 z" fill="#2f6b4f" />
+            </marker>
+          </defs>
+
+          <text x="450" y="38" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="20" font-weight="700" fill="#11150f">Sustainability is about capturing value in the changing environment</text>
+
+          <ellipse cx="450" cy="255" rx="380" ry="150" fill="#ecf4ee" stroke="#2f6b4f" stroke-width="2" stroke-opacity="0.35" />
+
+          <text x="450" y="120" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="18" font-weight="700" fill="#11150f">The changing environment</text>
+          <text x="450" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#4a4f47">Regulation · Markets · Climate · Stakeholders</text>
+
+          <circle cx="450" cy="285" r="130" fill="none" stroke="#2f6b4f" stroke-width="1.5" stroke-dasharray="5 7" stroke-opacity="0.55" />
+          <text x="450" y="405" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-style="italic" fill="#4a4f47" opacity="0.9">expanded sphere of influence</text>
+
+          <circle cx="450" cy="285" r="78" fill="#2f6b4f" />
+          <text x="450" y="278" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Business sphere</text>
+          <text x="450" y="298" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#ffffff" opacity="0.85">of influence</text>
+
+          <path d="M 395 235 Q 300 195 200 170" stroke="#2f6b4f" stroke-width="2.2" fill="none" marker-end="url(#arrow)" stroke-linecap="round" />
+          <text x="80" y="178" font-family="Bricolage Grotesque, sans-serif" font-size="15" font-weight="700" fill="#11150f">Opportunities</text>
+          <text x="80" y="198" font-family="Inter, sans-serif" font-size="12" fill="#4a4f47">expand the sphere</text>
+          <text x="80" y="214" font-family="Inter, sans-serif" font-size="12" fill="#4a4f47">when taken on early</text>
+
+          <path d="M 770 340 Q 680 360 530 320" stroke="#2f6b4f" stroke-width="2.2" fill="none" marker-end="url(#arrow)" stroke-linecap="round" />
+          <text x="700" y="380" font-family="Bricolage Grotesque, sans-serif" font-size="15" font-weight="700" fill="#11150f">Risks</text>
+          <text x="700" y="400" font-family="Inter, sans-serif" font-size="12" fill="#4a4f47">addressed early</text>
+          <text x="700" y="416" font-family="Inter, sans-serif" font-size="12" fill="#4a4f47">protect the sphere</text>
+        </svg>
+      </div>
+      <p class="value-caption reveal">
+        Risks left unmanaged become costs. Opportunities left uncaptured become competitor advantages. The job is to read the environment early, build internal capability to respond, and turn that into commercial outcomes.
+      </p>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Selected achievements</h2>
+        <div class="label">02 · Grouped by lens</div>
+      </div>
+      <p class="intro reveal">
+        Lyka achievements grouped under the three lenses above. Click any bubble for the detail.
+      </p>
+
+      <!-- Lens 1: Risk reduction -->
+      <div class="lens-block reveal">
+        <div class="lens-head">
+          <div class="lens-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Risk reduction vehicle</h3>
+        </div>
+        <div class="bubbles">
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · Strategy</span>
+                <span class="bubble-headline">Five-pillar sustainability strategy</span>
+                <span class="bubble-meta">Strategy live</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Defined Lyka's five sustainability pillars (Carbon, Circularity, Water, Biodiversity Positive, Social Impact), production-normalised KPIs under each, and the project roadmap to deliver them. Established the cross-functional <strong>Sustainability Guild</strong> as the governance mechanism, embedding governance, metrics and targets, strategy, and risk management cadence. Presented to leadership and rolled out company-wide.
+            </div>
+          </details>
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · GHG Accounting</span>
+                <span class="bubble-headline">Full-scope GHG inventory</span>
+                <span class="bubble-meta">Scope 1 to 3 · audit verified</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Designed Lyka's Scope 1, 2 and 3 emissions inventory aligned to the GHG Protocol, drawing on production, recipe, supplier, customer location, utilities, and people data. Approved by a third-party certified auditor and used as the basis for the carbon-neutrality program.
+            </div>
+          </details>
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · ESG Governance</span>
+                <span class="bubble-headline">B Corporation certification</span>
+                <span class="bubble-meta">82.6 score · +32.6 points</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Trawled the 200+ B Corp questionnaire, prioritised high-impact actions by points-per-effort, ran weekly governance cadence and a tracked project board. Lifted Lyka's score from 52 to 82.6 and steered the program through audit.
+            </div>
+          </details>
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · Supplier Risk</span>
+                <span class="bubble-headline">Modern Slavery + supplier framework</span>
+                <span class="bubble-meta">74% of 92 material suppliers signed</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Authored Lyka's Modern Slavery Statement, Supplier Code of Conduct, supplier questionnaire, and new-supplier intake form. Embedded structured supplier risk assessment and ongoing partnerships on water, land, and carbon practices. <a href="https://modernslaveryregister.gov.au/statements/25776/" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">View statement on the Commonwealth register →</a>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- Lens 2: Innovation -->
+      <div class="lens-block reveal">
+        <div class="lens-head">
+          <div class="lens-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
+          </div>
+          <h3>Innovation opportunity creator</h3>
+        </div>
+        <div class="bubbles">
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · Product</span>
+                <span class="bubble-headline">Recipe transition program</span>
+                <span class="bubble-meta">-30% carbon intensity across 6 meal lines</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Researched lower-impact proteins (kangaroo, fish, wild boar, camel), partnered with R&amp;D on palatability, supply, and machinery fit, then launched kangaroo and fish recipes that diversified the range and reduced upstream FLAG emissions.
+            </div>
+          </details>
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · Packaging</span>
+                <span class="bubble-headline">Sugarcane-based meal pouches</span>
+                <span class="bubble-meta">2.5x less carbon vs virgin plastic</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Scoped and tested vendors, ran trials through the thermoforming line, and engineered a sugarcane-based pouch that holds vacuum seal and food safety. Backed by a marketing rollout that landed approximately 100 five-star customer reviews citing the packaging.
+            </div>
+          </details>
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · Energy</span>
+                <span class="bubble-headline">Solar, IoT, and EV partnership stack</span>
+                <span class="bubble-meta">-24% facility emissions intensity</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Mixed-finance solar rollout (PPA + loan agreement) across two manufacturing sites, IoT sensors on freezers, and a partnership financial model proposing investment in EV last-mile delivery vehicles. Combined programs reduced facility emissions intensity by 24%.
+            </div>
+          </details>
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · Finance</span>
+                <span class="bubble-headline">Grants secured for sustainability work</span>
+                <span class="bubble-meta">$1M+ in grant value delivered</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Scoped, applied for, and managed government and industry grants supporting Lyka's sustainability and capability programs. Owned end-to-end grant lifecycle: opportunity identification, technical drafting, financial modelling, and milestone reporting.
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- Lens 3: Branding -->
+      <div class="lens-block reveal">
+        <div class="lens-head">
+          <div class="lens-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+          </div>
+          <h3>Branding benefit</h3>
+        </div>
+        <div class="bubbles">
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · Partnerships</span>
+                <span class="bubble-headline">Sustainable partnerships program</span>
+                <span class="bubble-meta">270k+ trees · 14M+ bottles removed</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Curated impact partners aligned to the five pillars (carbon, plastic, water, biodiversity, pet welfare), ran joint marketing campaigns, and unlocked sustainable-brand discounts for Lyka customers through co-marketing collaborations.
+            </div>
+          </details>
+
+          <details class="bubble">
+            <summary>
+              <div class="bubble-main">
+                <span class="bubble-tag">Lyka · Engagement</span>
+                <span class="bubble-headline">Company-wide sustainability engagement</span>
+                <span class="bubble-meta">50% to 80% awareness</span>
+              </div>
+              <span class="bubble-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="bubble-body">
+              Lifted sustainability awareness from 50% to 80% across the company through onboarding sustainability training material, an introduction-to-sustainability workshop every two months, yearly org-wide sustainability lunches, and team-specific training sessions tailored to function.
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Experience</h2>
+        <div class="label">03 · Click any role for detail</div>
+      </div>
+
+      <h3 class="exp-group-label reveal">Full-time</h3>
+      <div class="bubbles reveal" style="grid-template-columns: 1fr 1fr;">
+
+        <details class="bubble">
+          <summary>
+            <div class="bubble-main">
+              <span class="bubble-tag">Feb 2025 to Present · Lyka Pet Food</span>
+              <span class="bubble-headline">Sustainability Lead</span>
+              <span class="bubble-meta">Manages compliance, data, governance, utilities, and decarbonisation projects</span>
+            </div>
+            <span class="bubble-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="bubble-body">
+            Manage Lyka's full sustainability function across compliance, utilities, environmental projects, data infrastructure, and governance.
+            <ul>
+              <li>Managed compliance reporting: authored Lyka's first Modern Slavery Statement under the Modern Slavery Act, managed Packaging Legislation compliance under the National Environment Protection Measures Act, and AASB S2 (Australia's mandatory climate-related financial disclosure standard, repurposed from IFRS S2).</li>
+              <li>Managed the utilities accounts: saved over $100,000 by monitoring energy markets and switching contracts at the right inflection points.</li>
+              <li>Led environmental reduction projects: heat pump installation, EV fleet transition with the last-mile delivery partner, and a packaging materials transition across the product range.</li>
+              <li>Data management and continuous improvement: migrated all historical emissions data to a new carbon accounting platform for completeness and auditability. Engaged Sedex to track sustainable performance across the supply chain.</li>
+              <li>Drove governance and accountability towards sustainability goals: established the cross-functional Sustainability Guild to drive accountability and improvement against ESG metrics and targets through prioritised actions.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="bubble">
+          <summary>
+            <div class="bubble-main">
+              <span class="bubble-tag">Aug 2023 to Feb 2025 · Lyka Pet Food</span>
+              <span class="bubble-headline">Sustainability Associate</span>
+              <span class="bubble-meta">Built out the function, led B Corp certification, ran partnerships, training, and policy</span>
+            </div>
+            <span class="bubble-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="bubble-body">
+            Foundational build-out of Lyka's sustainability function during the company's early scale-up.
+            <ul>
+              <li>Led B Corporation certification: lifted Lyka's score from 52 to 82.6 and cleared third-party audit.</li>
+              <li>Managed the Charitable Partner Account: sourced and managed 10+ partners worth $2M annually, achieving <em>1% for the Planet</em> certification. Balanced partner capacity against marketing bandwidth to maximise joint impact through co-delivered campaigns, education, and volunteering programs.</li>
+              <li>Led sustainability training and awareness initiatives: built a 4-module internal onboarding course, ran intro-to-sustainability sessions every two months for new starters, and led yearly company town halls. Awareness lifted from 50% to 80%.</li>
+              <li>Authored and enforced 20+ company policies: covering stakeholder governance, grievance procedures, and environmental and social decision-making. Written in plain language for ease of understanding and enforceability, and iterated as the organisation scaled.</li>
+              <li>Negotiated and executed solar PPA: 20% facility energy transition; deployed IoT energy sensors.</li>
+              <li>Led recipe transition program: launched kangaroo and fish recipes for lower-impact protein.</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+
+      <h3 class="exp-group-label reveal">Early career &amp; part-time</h3>
+      <div class="bubbles reveal" style="grid-template-columns: 1fr 1fr;">
+
+        <details class="bubble">
+          <summary>
+            <div class="bubble-main">
+              <span class="bubble-tag">May 2024 to Present · UNSW · Part-time</span>
+              <span class="bubble-headline">Casual Academic, Information Systems</span>
+              <span class="bubble-meta">Teaches digital transformation and database management</span>
+            </div>
+            <span class="bubble-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="bubble-body">
+            Practical instruction in digital transformation and database management to 90+ students. Introduced BPMN, use-case modelling, star and galaxy schema architecture, and SQL-based warehouse operations on Oracle SQL Developer.
+          </div>
+        </details>
+
+        <details class="bubble">
+          <summary>
+            <div class="bubble-main">
+              <span class="bubble-tag">Mar 2022 to Aug 2023 · Lyka Pet Food · Part-time</span>
+              <span class="bubble-headline">Strategy &amp; Business Operations Analyst</span>
+              <span class="bubble-meta">Built Lyka's commercial and ESG infrastructure</span>
+            </div>
+            <span class="bubble-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="bubble-body">
+            Joined Lyka pre-sustainability function and built out cross-functional commercial and ESG infrastructure.
+            <ul>
+              <li>Built Lyka's first carbon model and waste emissions model.</li>
+              <li>Designed and ran the company volunteer program: 10% to 20% participation, 4x hours.</li>
+              <li>Delivered the new office build and DAM implementation: 95% promoter NPS on the office; 40% cost reduction on DAM with 100% team adoption.</li>
+              <li>Designed the benefits and policy program: contributed to a Hatch Best Place to Work Award and a 4.5 Glassdoor rating.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="bubble">
+          <summary>
+            <div class="bubble-main">
+              <span class="bubble-tag">Nov 2021 to Mar 2022 · Procter &amp; Gamble · Part-time</span>
+              <span class="bubble-headline">Product Supply Intern</span>
+              <span class="bubble-meta">Re-architected ANZ product supply risk forecasting</span>
+            </div>
+            <span class="bubble-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="bubble-body">
+            Led a 12-week product supply risk project, connecting inventory, tracking, and sales data into a Power BI dashboard. Designed the calculation methodology, partnered with the ANZ and Singapore teams, and presented the implementation framework to upper management.
+          </div>
+        </details>
+
+        <details class="bubble">
+          <summary>
+            <div class="bubble-main">
+              <span class="bubble-tag">Mar 2021 to Aug 2021 · Westpac · Part-time</span>
+              <span class="bubble-headline">Project Coordinator</span>
+              <span class="bubble-meta">Reduced contract review rework from 30% to 15%</span>
+            </div>
+            <span class="bubble-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="bubble-body">
+            Coordinated a contract remediation team during a major compliance program. Diagnosed pipeline bottlenecks, restructured the Jira workflow, and reduced rework from 30% to 15% while increasing throughput by 20%.
+          </div>
+        </details>
+
+        <details class="bubble">
+          <summary>
+            <div class="bubble-main">
+              <span class="bubble-tag">Jan 2020 to Mar 2021 · KPMG · Part-time</span>
+              <span class="bubble-headline">Data Delivery &amp; Excellence Analyst</span>
+              <span class="bubble-meta">+40% efficiency on cross-border tax processing</span>
+            </div>
+            <span class="bubble-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="bubble-body">
+            Modelled US-Australia tax treatment scenarios and double-tax-treaty advice. Built a VBA-based expense flagging tool and MECE treatment guide for cross-border clients, delivering a 40% efficiency uplift on the expense categorisation process.
+          </div>
+        </details>
+
+        <details class="bubble">
+          <summary>
+            <div class="bubble-main">
+              <span class="bubble-tag">Sep 2018 to Jan 2020 · New Chambers · Part-time</span>
+              <span class="bubble-headline">Legal Clerk</span>
+              <span class="bubble-meta">Research, drafting, and case preparation for commercial barristers</span>
+            </div>
+            <span class="bubble-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="bubble-body">
+            Supported barristers at New Chambers (a leading Sydney commercial chambers) across case research, document review, and trial preparation. Drafted research memoranda on points of law, coordinated court filings and brief management, and assisted with the day-to-day operations of a busy chambers practice.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="press">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>In the field</h2>
+        <div class="label">04 · Press &amp; social</div>
+      </div>
+      <p class="intro reveal">Selected pieces where the sustainability work has been featured by partners and the wider B Corp community.</p>
+
+      <div class="press-cards">
+
+        <a class="press-link reveal" href="https://www.linkedin.com/posts/laundry-lane_bcorpmonth-genb-ugcPost-7313365609440768003-vp-p" target="_blank" rel="noopener">
+          <div class="press-platform">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.337 18.339V9.667H5.667v8.672h2.67zM7.003 8.498a1.547 1.547 0 100-3.094 1.547 1.547 0 000 3.094zm11.336 9.841v-4.755c0-2.566-1.371-3.761-3.198-3.761a2.76 2.76 0 00-2.503 1.378V9.667h-2.67c.034.75 0 8.672 0 8.672h2.67v-4.844a1.83 1.83 0 011.755-1.957c1.231 0 1.722.937 1.722 2.31v4.491h2.224z"/></svg>
+            LinkedIn
+          </div>
+          <div class="press-author">Laundry Lane</div>
+          <div class="press-title">B Corp Month: Gen B feature</div>
+          <div class="press-desc">Lyka highlighted as part of the next generation of certified B Corps driving systemic change.</div>
+          <div class="press-cta">View the post</div>
+        </a>
+
+        <a class="press-link reveal" href="https://www.linkedin.com/posts/groundedpackaging_lyka-is-a-pioneer-of-the-pet-food-industry-ugcPost-7214417790781333505-SYLS" target="_blank" rel="noopener">
+          <div class="press-platform">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.337 18.339V9.667H5.667v8.672h2.67zM7.003 8.498a1.547 1.547 0 100-3.094 1.547 1.547 0 000 3.094zm11.336 9.841v-4.755c0-2.566-1.371-3.761-3.198-3.761a2.76 2.76 0 00-2.503 1.378V9.667h-2.67c.034.75 0 8.672 0 8.672h2.67v-4.844a1.83 1.83 0 011.755-1.957c1.231 0 1.722.937 1.722 2.31v4.491h2.224z"/></svg>
+            LinkedIn
+          </div>
+          <div class="press-author">Grounded Packaging</div>
+          <div class="press-title">"Lyka is a pioneer of the pet food industry"</div>
+          <div class="press-desc">Grounded Packaging on the sustainable-packaging partnership and its lower-impact materials transition.</div>
+          <div class="press-cta">View the post</div>
+        </a>
+
+        <a class="press-link reveal" href="https://www.instagram.com/reel/DXYpuJPAbnc/" target="_blank" rel="noopener">
+          <div class="press-platform">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311C8.416 2.175 8.796 2.163 12 2.163zm0 1.802c-3.149 0-3.515.013-4.756.069-1.024.047-1.586.214-1.957.357a3.21 3.21 0 00-1.198.78 3.21 3.21 0 00-.78 1.198c-.143.371-.31.933-.357 1.957-.056 1.241-.069 1.607-.069 4.756s.013 3.515.069 4.756c.047 1.024.214 1.586.357 1.957.18.467.397.798.78 1.198.4.383.731.6 1.198.78.371.143.933.31 1.957.357 1.241.056 1.607.069 4.756.069s3.515-.013 4.756-.069c1.024-.047 1.586-.214 1.957-.357.467-.18.798-.397 1.198-.78.383-.4.6-.731.78-1.198.143-.371.31-.933.357-1.957.056-1.241.069-1.607.069-4.756s-.013-3.515-.069-4.756c-.047-1.024-.214-1.586-.357-1.957a3.21 3.21 0 00-.78-1.198 3.21 3.21 0 00-1.198-.78c-.371-.143-.933-.31-1.957-.357-1.241-.056-1.607-.069-4.756-.069zm0 3.064a5.135 5.135 0 110 10.271 5.135 5.135 0 010-10.271zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+            Instagram
+          </div>
+          <div class="press-author">Reel</div>
+          <div class="press-title">Sustainability in motion</div>
+          <div class="press-desc">Behind the scenes of Lyka's sustainability programs and the team building them.</div>
+          <div class="press-cta">Watch the reel</div>
+        </a>
+
+      </div>
+
+      <a class="register-card reveal" href="https://modernslaveryregister.gov.au/statements/25776/" target="_blank" rel="noopener">
+        <div class="register-meta">
+          <div class="register-source">Australian Government · Modern Slavery Register</div>
+          <div class="register-title">Lyka Pet Food Modern Slavery Statement</div>
+          <div class="register-desc">Authored and published statement filed on the Commonwealth's Modern Slavery Register, covering supplier risk assessment, due-diligence procedures, and governance.</div>
+        </div>
+        <div class="register-cta">View on register →</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Education &amp; certifications</h2>
+        <div class="label">05 · Foundations</div>
+      </div>
+      <div class="creds">
+
+        <div class="cred reveal">
+          <h4>Bachelor of Commerce (Information Systems) / Bachelor of Laws · Distinction</h4>
+          <p>The University of New South Wales. Dual major across data architecture, governance, environmental policy, and regulatory design. Multiple national case-competition wins.</p>
+          <div class="year">2018 to 2023</div>
+        </div>
+
+        <div class="cred reveal">
+          <h4>The Future of Sustainable Business</h4>
+          <p>University of Oxford. Enterprise and the Environment. Executing successful sustainability strategies and business models.</p>
+          <div class="year">December 2025</div>
+        </div>
+
+        <div class="cred reveal">
+          <h4>GRI Certified Sustainability Professional</h4>
+          <p>Global Reporting Initiative. Specialist expertise in business-impact-focused sustainability reporting.</p>
+          <div class="year">January 2025</div>
+        </div>
+
+        <div class="cred reveal">
+          <h4>Pro Bono &amp; Leadership</h4>
+          <p>Pro bono consulting through 180 Degrees Consulting and BusinessOne: housing economics work for a NSW government department and a financing strategy for a not-for-profit working on kelp-based carbon sequestration. Brief Editor at UNSW Law Society; Education Director at UNSW Business Society.</p>
+          <div class="year">2019 to 2023</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobbies -->
+  <section id="journey">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>My journey</h2>
+        <div class="label">06 · The why</div>
+      </div>
+      <div class="journey-wrap reveal">
+        <p>My love for nature started early. Both of my parents are scientists, and I got properly hooked the day they handed me my first nature book. More followed, and I sat in awe of how the planet formed, how ecosystems hold together, and how today's species came to be. That curiosity built a real thirst for knowledge.</p>
+        <p>I lost some of that spark through my schooling years. I was lucky enough to intern across law, consulting, banking, and FMCG, and learned a lot in each. But what actually pulled me back in was the work I did pro bono for mission-driven organisations. That was where I rediscovered why I cared.</p>
+        <p>What I care about now is <strong>positive social and environmental change at the systems level</strong>. There's a long way to go, and the hurdles are genuinely complex. The more I learn about the economic, regulatory, financial, and psychological factors that drive how individuals and systems actually shift, the more I want to put that knowledge to work creating a better future for every living thing on this planet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Off the clock</h2>
+        <div class="label">06 · Outside work</div>
+      </div>
+      <p class="intro reveal">
+        The natural world is not just my work. Forty-six countries, most NSW hikes I can find,
+        and weekends underwater or on a mountain.
+      </p>
+
+      <div class="hobby-row">
+        <div class="hobby reveal">
+          <span class="icon" aria-hidden="true">🤿</span>
+          <h4>Scuba diving</h4>
+          <p>From reef to wreck.</p>
+        </div>
+        <div class="hobby reveal">
+          <span class="icon" aria-hidden="true">🥾</span>
+          <h4>Hiking</h4>
+          <p>Hiked-out NSW.</p>
+        </div>
+        <div class="hobby reveal">
+          <span class="icon" aria-hidden="true">🏂</span>
+          <h4>Snowboarding</h4>
+          <p>Alps over everything.</p>
+        </div>
+        <div class="hobby reveal">
+          <span class="icon" aria-hidden="true">🌍</span>
+          <h4>46 countries</h4>
+          <p>Culture through food.</p>
+        </div>
+      </div>
+
+      <div class="carousel-wrap reveal">
+        <div class="carousel" id="travel-carousel">
+          <div class="photo"><img src="images/travel-01.jpg" alt="Cap de Formentor, Mallorca" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Cap de Formentor</strong>Mallorca, Spain</div></div>
+          <div class="photo"><img src="images/travel-02.jpg" alt="Cala d'Or, Mallorca" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Cala d'Or</strong>Mallorca, Spain</div></div>
+          <div class="photo"><img src="images/travel-03.jpg" alt="Cala Llombards beach, Mallorca" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Cala Llombards</strong>Mallorca, Spain</div></div>
+          <div class="photo"><img src="images/travel-04.jpg" alt="Valldemossa village, Mallorca" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Valldemossa</strong>Mallorca, Spain</div></div>
+          <div class="photo"><img src="images/travel-05.jpg" alt="Chefchaouen, the Blue City of Morocco" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>The blue city</strong>Chefchaouen, Morocco</div></div>
+          <div class="photo"><img src="images/travel-06.jpg" alt="Sunset cityscape, Granada" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Sunset cityscape</strong>Granada, Spain</div></div>
+          <div class="photo"><img src="images/travel-07.jpg" alt="Venice from the Campanile" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>From the Campanile</strong>Venice, Italy</div></div>
+          <div class="photo"><img src="images/travel-08.jpg" alt="Matterhorn, Zermatt" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Matterhorn</strong>Zermatt, Switzerland</div></div>
+          <div class="photo"><img src="images/travel-09.jpg" alt="Aiguilles de Chamonix" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Aiguilles de Chamonix</strong>France</div></div>
+          <div class="photo"><img src="images/travel-10.jpg" alt="Swiss Alps above the clouds" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Above the clouds</strong>Swiss Alps</div></div>
+          <div class="photo"><img src="images/travel-11.jpg" alt="Makarska Riviera, Croatia" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Makarska Riviera</strong>Croatia</div></div>
+          <div class="photo"><img src="images/travel-12.jpg" alt="Sunset over the Adriatic, Dubrovnik" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Sunset over the Adriatic</strong>Dubrovnik, Croatia</div></div>
+          <div class="photo"><img src="images/travel-13.jpg" alt="Bay of Kotor, Montenegro" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Bay of Kotor</strong>Montenegro</div></div>
+          <div class="photo"><img src="images/travel-14.jpg" alt="Blue Eye spring, Albania" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Blue Eye spring</strong>Albania</div></div>
+          <div class="photo"><img src="images/travel-15.jpg" alt="Greek Islands crystal waters" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Crystal waters</strong>Greek Islands</div></div>
+          <div class="photo"><img src="images/travel-16.jpg" alt="Sung Sot Cave, Ha Long Bay" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Sung Sot Cave</strong>Ha Long Bay, Vietnam</div></div>
+          <div class="photo"><img src="images/travel-17.jpg" alt="Seoraksan peaks, South Korea" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Seoraksan peaks</strong>South Korea</div></div>
+          <div class="photo"><img src="images/travel-18.jpg" alt="Lake Hawea, New Zealand" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Lake Hawea</strong>New Zealand</div></div>
+          <div class="photo"><img src="images/travel-19.jpg" alt="Hooker Valley, New Zealand" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Hooker Valley</strong>New Zealand</div></div>
+          <div class="photo"><img src="images/travel-20.jpg" alt="Connemara National Park, Ireland" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Diamond Hill</strong>Connemara, Ireland</div></div>
+          <div class="photo"><img src="images/travel-21.jpg" alt="Gap of Dunloe, Killarney" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Gap of Dunloe</strong>Killarney, Ireland</div></div>
+          <div class="photo"><img src="images/travel-22.jpg" alt="Garie Beach, Royal National Park" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Garie Beach</strong>Royal NP, NSW</div></div>
+          <div class="photo"><img src="images/travel-23.jpg" alt="Coastal walk, Royal National Park" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Coastal walk</strong>Royal NP, NSW</div></div>
+          <div class="photo"><img src="images/travel-24.jpg" alt="Hidden cove, Western Australia" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Hidden cove</strong>Western Australia</div></div>
+          <div class="photo"><img src="images/travel-25.jpg" alt="Bushland path, NSW" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Bushland path</strong>NSW, Australia</div></div>
+          <div class="photo"><img src="images/travel-26.jpg" alt="Grose Valley, Blue Mountains" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Grose Valley</strong>Blue Mountains, NSW</div></div>
+          <div class="photo"><img src="images/travel-27.jpg" alt="Wentworth Falls pool, Blue Mountains" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Wentworth Falls pool</strong>Blue Mountains, NSW</div></div>
+          <div class="photo"><img src="images/travel-28.jpg" alt="Pagoda country, Gardens of Stone" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Pagoda country</strong>Gardens of Stone, NSW</div></div>
+          <div class="photo"><img src="images/travel-29.jpg" alt="Forest creek, NSW" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Forest creek</strong>NSW, Australia</div></div>
+          <div class="photo"><img src="images/travel-30.jpg" alt="Sandstone forest, NSW" onerror="this.style.display='none'" loading="lazy"><div class="cap"><strong>Sandstone forest</strong>NSW, Australia</div></div>
+        </div>
+        <div class="carousel-nav">
+          <button id="carousel-prev" aria-label="Scroll left">‹</button>
+          <button id="carousel-next" aria-label="Scroll right">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap" style="text-align: center; padding: 24px 0;">
+      <div class="eyebrow reveal" style="justify-content: center;">Let's talk</div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 700; font-size: clamp(26px, 4vw, 40px); letter-spacing: -0.01em; max-width: 760px; margin: 0 auto 24px; line-height: 1.25;">
+        Curious about the journey, opportunities, or advisory?
+      </h2>
+      <p class="reveal" style="color: var(--ink-soft); max-width: 580px; margin: 0 auto 32px;">
+        Always keen to chat with people building things at the intersection of profit and planet. Whether you want to swap notes on a sustainability initiative, explore where our paths might cross, or pick my brain in an advisory capacity, I'd love to hear from you.
+      </p>
+      <a href="mailto:coreywon99@gmail.com" class="cta reveal">Email me</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2026 Corey Won · Sydney, Australia</div>
+    <div>
+      <a href="https://www.linkedin.com/in/coreywon" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:coreywon99@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal-on-scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Travel carousel buttons
+  const carousel = document.getElementById('travel-carousel');
+  const prev = document.getElementById('carousel-prev');
+  const next = document.getElementById('carousel-next');
+  const step = () => Math.round(carousel.clientWidth * 0.6);
+  prev.addEventListener('click', () => carousel.scrollBy({ left: -step(), behavior: 'smooth' }));
+  next.addEventListener('click', () => carousel.scrollBy({ left: step(), behavior: 'smooth' }));
+</script>
+
+</body>
+</html>
